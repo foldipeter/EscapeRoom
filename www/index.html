@@ -1,25 +1,228 @@
-<!DOCTYPE html>
-<html lang = "hu">
+<!doctype html>
+<html lang="hu">
+
 <head>
-    <meta charset = "UTF-8">
-    <meta name = "viewport" content = "user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-denistydpi=device-dpi">
     <title>Szabadulószoba</title>
-    <script type = "text/javascript" src="js/index.js"></script>
-    <link rel = "stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
+
 <body>
-    <header>
-        <img src = "img/logoCommon.png">
-        <h1>MTM MM Élménytér - Szabadulószoba</h1>
-        <p>● ○○○ ○○○ ○○○ ○○○ ○</p>
+    <header class="grid2c">
+        <img src="img/logoCommon.png" width="75px" onclick="nextLevel()">
+        <article class="flexc marginl10">
+            <p>MTM MM Élménytér - Szabadulószoba</p>
+            <p id="status">● ○○○ ○○○ ○○○ ○○○ ○</p>
+        </article>
     </header>
     <main>
-        <section>
-              
+        <section id="level1" class="borderbluegray">
+            <article class="grid2c">
+                <img src="img/logoSymbol.png" width="60px">
+                <p class="flexc bold">Bevezetés</p>
+            </article>
+            <article>
+                <p class="bold">Jártatok már szabadulószobában?</p>
+                <p>Ha nem, akkor ez egy remek alkalom arra, hogy kipróbáld, milyen élvezetes kiszabadulni egy bezárt
+                    szobából, pusztán a logikádnak köszönhetően! Fejtörők és logikai összefüggések segítenek majd, hogy
+                    egyre közelebb jussatok a kijárathoz. Nincs szükség lexikális tudásra, ellenben az együttműködés, a
+                    kreativitás mind kell a bent töltött idő alatt.</p>
+                <p>Ha viszont jártál már hasonló helyen, most részesei lehettek néhány igazán egyedi tudományos
+                    szabadulásnak.</p>
+                <p>A szabadulószobában 2-5 fő játszhat egyszerre egy időben, és 45-60 perc áll a rendelkezésetekre a
+                    kiszabaduláshoz.</p>
+                <p>A játék során egy fiatal őslénykutató bőrébe bújhattok, akik rejtélyes meghívást kaptak levélben Mr.
+                    X-től, a híres tudóstól. Mr. X azt állítja, hogy megfejtette a Bába-kő rejtélyét. Arra kér
+                    benneteket, hogy oldjátok meg a felfedezéshez vezető rejtvényeket. Vizsgáljátok meg a rendelkezésre
+                    álló bizonyítékokat, az eredményeket gondoljátok végig. Mr. X arra kíváncsi, hogy ugyan arra a
+                    következtetésre juttok-e, mint Ő. Ha sikerül, együtt tárhatjátok eredményeteket a világ felé.
+                    Rendkívül csábító ajánlat ez arra, hogy bekerülhessen a nevetek a Föld történetébe.</p>
+            </article>
+            <article class="flexc">
+                <label for="level1Name" class="bold">Találjatok ki egy csapatnevet és írjátok ide!</label>
+                <input type="text" id="level1Name" placeholder="Csapatnév">
+                <button onclick="level1Click()">Induljun a kaland!</button>
+                <p id="level1Error" class="error  none">Valami gond van a névvel! Próbáld újra!</p>
+            </article>
+        </section>
+        <section id="level2" class="none borderbeutyblue">
+            <article class="grid2c">
+                <img src="img/logoMineralSymbol.png" width="60px">
+                <p class="flexc bold">Bányaüreg I.</p>
+            </article>
+            <article>
+                <p class="bold">Történet</p>
+                <p>Ő még kang gyomos gányonához tékoztal, de máig intésben férkőzött, mint a ványos zsellem abból az
+                    álomból. Passzió a fokré, akit vagonon tázás és vagonon kupca mindenhová magával takságozott, hogy
+                    mindent satlasztjon, amit csak lehet, s így később be tudjon meztelnie hitelesen a vedéseinek a
+                    pezsgőkről. Ugatlan perbó (a szandolcsányok): la halat, hosta, bintok, nehesség.</p>
+            </article>
+            <article class="flexc">
+                <p class="bold">Csoportosítsd az ásványokat! Melyik található csak Recsken, melyik csak
+                    Gyöngyösorosziban, és melyik
+                    fordul elő mindkét településen?</p>
+                <article class="grid3c">
+                    <p class="textcenter bold colorbeutyblue" onclick="level2ClickContainer('level2R')">Recsk</p>
+                    <p class="textcenter bold colorbeutyblue" onclick="level2ClickContainer('level2M')">Mindkettő</p>
+                    <p class="textcenter bold colorbeutyblue" onclick="level2ClickContainer('level2Gy')">Gyöngyösoroszi
+                    </p>
+                    <article id="level2R">
+                    </article>
+                    <article id="level2M">
+                    </article>
+                    <article id="level2Gy">
+                    </article>
+                </article>
+                <p class="textcenter bold colorbeutyblue" onclick="level2ClickContainer('level2A')">Ásványok</p>
+                <article class="flex" id="level2A">
+                    <p id="level2pirit" onclick="level2ClickMinerals(this.id)" class="textcenter">pirit</p>
+                    <p id="level2kalkopirit" onclick="level2ClickMinerals(this.id)" class="textcenter">kalkopirit</p>
+                    <p id="level2wurtzit" onclick="level2ClickMinerals(this.id)" class="textcenter">wurtzit</p>
+                    <p id="level2fluorit" onclick="level2ClickMinerals(this.id)" class="textcenter">fluorit</p>
+                    <p id="level2kvarc" onclick="level2ClickMinerals(this.id)" class="textcenter">kvarc</p>
+                    <p id="level2barit" onclick="level2ClickMinerals(this.id)" class="textcenter">barit</p>
+                    <p id="level2aragonit" onclick="level2ClickMinerals(this.id)" class="textcenter">aragonit</p>
+                    <p id="level2kalcit" onclick="level2ClickMinerals(this.id)" class="textcenter">kalcit</p>
+                    <p id="level2anhidrit" onclick="level2ClickMinerals(this.id)" class="textcenter">anhidrit</p>
+                    <p id="level2antimonit" onclick="level2ClickMinerals(this.id)" class="textcenter">antimonit</p>
+                    <p id="level2szfalerit" onclick="level2ClickMinerals(this.id)" class="textcenter">szfalerit</p>
+                    <p id="level2dolomit" onclick="level2ClickMinerals(this.id)" class="textcenter">dolomit</p>
+                    <p id="level2pirrhotin" onclick="level2ClickMinerals(this.id)" class="textcenter">pirrhotin</p>
+                    <p id="level2galenit" onclick="level2ClickMinerals(this.id)" class="textcenter">galenit</p>
+                    <p id="level2markazit" onclick="level2ClickMinerals(this.id)" class="textcenter">markazit</p>
+                </article>
+                <button onclick="level2Click()">Ellenőrzés!</button>
+                <p id="level2Error" class="error  none">Nem az igazi! Nézd át újra! Rossz helyen lévő elemek száma:
+                    <span id="level2Score">X</span>.</p>
+                <p>A csoportosításhoz elsőnek válaszd ki az ásvány nevét azután a kategóriát, ahová tartozik!</p>
+            </article>
+        </section>
+        <section id="level3" class="none borderbeutyblue">
+            <article class="grid2c">
+                <img src="img/logoMineralSymbol.png" width="60px">
+                <p class="flexc bold">Bányaüreg II.</p>
+            </article>
+            <article>
+                <p class="bold">Történet folytatása</p>
+                <p>A títvény spanyolul kartát, bözedést, hánát buzdít. A borászat a füstöző moslásoknál a teszenes
+                    faktansot emes feli bözedés, aki valamilyen olhává fanyartalan voznia. Az áradék spanyolul násos
+                    nőségöt buzdít, a kicsődés karálit. A stusban a csatott foklacc egy kvény és gubaj, genovány finát
+                    szolt rúga, amely még a jetlett csart előtt hadalt.</p>
+            </article>
+            <article class="flexc">
+                <p class="bold">Keresd a párját! Melyik ásvány melyik kristályrendszerbe tartozik? (Segít a képernyő!)
+                </p>
+                <article class="grid2ca">
+                    <p class="textcenter bold">Kristályrendszer</p>
+                    <p class="textcenter bold">Ásvány</p>
+                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3monoklin')">monoklin</p>
+                    <article id="level3monoklin"></article>
+                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3triklin')">triklin</p>
+                    <article id="level3triklin"></article>
+                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3rombos')">rombos</p>
+                    <article id="level3rombos"></article>
+                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3tetragonalis')">tetragonális</p>
+                    <article id="level3tetragonalis"></article>
+                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3szabalyos')">szabályos</p>
+                    <article id="level3szabalyos"></article>
+                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3hexagonalis')">hexagonális</p>
+                    <article id="level3hexagonalis"></article>
+                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3trigonalis')">trigonális</p>
+                    <article id="level3trigonalis"></article>
+                </article>
+                <article>
+                    <p class="textcenter bold"  onclick="level3ClickContainer('level3asvanyok')">Ásványok</p>
+                    <article id="level3asvanyok" class="flex">
+                        <p id="level3kalkopirit" class="textcenter" onclick="level3ClickMinerals(this.id)">kalkopirit</p>
+                        <p id="level3galenit" class="textcenter" onclick="level3ClickMinerals(this.id)">galenit</p>
+                        <p id="level3kvarc" class="textcenter" onclick="level3ClickMinerals(this.id)">kvarc</p>
+                        <p id="level3albit" class="textcenter" onclick="level3ClickMinerals(this.id)">albit</p>
+                        <p id="level3wurtzit" class="textcenter" onclick="level3ClickMinerals(this.id)">wurtzit</p>
+                        <p id="level3gipsz" class="textcenter" onclick="level3ClickMinerals(this.id)">gipsz</p>
+                        <p id="level3barit" class="textcenter" onclick="level3ClickMinerals(this.id)">barit</p>
+                    </article>
+                </article>
+
+            </article>
+        </section>
+        <section id="level4" class="none">
+
+        </section>
+        <section id="level5" class="none">
+
+        </section>
+        <section id="level6" class="none">
+
+        </section>
+        <section id="level7" class="none">
+
+        </section>
+        <section id="level8" class="none">
+
+        </section>
+        <section id="level9" class="none">
+
+        </section>
+        <section id="level10" class="none">
+
+        </section>
+        <section id="level11" class="none">
+
+        </section>
+        <section id="level12" class="none">
+
+        </section>
+        <section id="level13" class="none">
+
+        </section>
+        <section id="level14" class="borderbluegray none">
+            <article class="grid2c">
+                <img src="img/logoSymbol.png" width="60px">
+                <p class="flexc">Befejezés</p>
+            </article>
+            <article>
+                <p>Megtaláltad a Bába-kő rejtélyét, azt, hogy hévforrás. Véget ért a képzeletbeli utazás időben és
+                    térben. Nagy utat jártál be, ügyesen megoldottál minden feladatot. Remélem, emlékezetedben megőrzöd,
+                    amit tanultál a feladatok megfejtése során. Jutalmul a héten ide fogtok ellátogatni.</p>
+            </article>
+            <article>
+                <p>A(z) <span id="level14Name">Anonymus</span> elnevezű csapat teljesítette a küldetést <span
+                        id="level14Time">X</span> idő alatt.
+                <p>
+            </article>
+            <article>
+                <p>Bába-kő</p>
+                <p>Gyöngyössolymos határában a kis, jelentéktelennek tűnő szikla geológiai ritkaság. Kialakulása:
+                    vulkáni utóműködés során forró gázok és gőzök törtek fel a mélyből, hévforrások és gejzírek
+                    működtek. A gejzírek kovasavtartalmú meleg vize néhol átalakította a hegy kőzeteit, s egészen új
+                    kőzetfajta, a gejzirit keletkezett. Egyik babonás néphit szerint a nevét onnan kapta, hogy hajdanán
+                    itt égették el a boszorkányokat. Másik hiedelem szerint az öreg Mátra szelleme kergette a vasorrú
+                    bábát, akit nem tudott utolérni, így mérgében utána dobta ezt a nagy követ. Ezért hívják Bábakőnek.
+                </p>
+                <img src="img/babako.jpg" class="maxwidth">
+            </article>
         </section>
     </main>
     <footer>
-        <h1>MTM MM © Nyári Tábor 2020</h1>
+        <p>Összegyűjtött betűk:</p>
+        <article class="flex" id="containerLetters">
+            <p id="letter6" class="letters none">H</p>
+            <p id="letter1" class="letters none">É</p>
+            <p id="letter8" class="letters none">V</p>
+            <p id="letter9" class="letters none">F</p>
+            <p id="letter7" class="letters none">O</p>
+            <p id="letter3" class="letters none">R</p>
+            <p id="letter11" class="letters none">R</p>
+            <p id="letter5" class="letters none">Á</p>
+            <p id="letter2" class="letters none">S</p>
+            <p id="letter10" class="letters none">O</p>
+            <p id="letter4" class="letters none">K</p>
+        </article>
+        <p>MTM MM © Nyári Tábor 2020</p>
     </footer>
 </body>
+
 </html>
