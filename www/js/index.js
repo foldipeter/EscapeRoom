@@ -99,7 +99,58 @@ function level3ClickContainer(id) {
         document.getElementById(level3.selected).classList.remove("borderblue");
         level3.selected = "none";
     }
-    console.log(level3);
+}
+
+function level3Click() {
+    let score = 0;
+    for (let i in level3.solution) {
+        if (level3.solution[i] == level3.currentm[i]) {
+            score++;
+        }
+    }
+    if (score == 7) {
+        nextLevel();
+    } else {
+        score = 7 - score;
+        document.getElementById("level3Score").innerHTML = score;
+        document.getElementById("level3Error").classList.remove("none");
+    }
+}
+
+function level4Click() {
+    let name = document.getElementById("level4Name").value;
+    if (name.trim().toUpperCase() == "S") {
+        nextLevel();
+    } else {
+        document.getElementById("level4Error").classList.remove("none");
+    }
+}
+
+function level5Click() {
+    let name = document.getElementById("level5Name").value;
+    if (name.trim().toUpperCase() == "K") {
+        nextLevel();
+    } else {
+        document.getElementById("level5Error").classList.remove("none");
+    }
+}
+
+function level6Click() {
+    let name = document.getElementById("level6Name").value;
+    if ((name.trim().toUpperCase() == "YUCATÁN") || (name.trim().toUpperCase() == "YUCATAN") || (name.trim().toUpperCase() == "YUCATÁN-FÉLSZIGET") || (name.trim().toUpperCase() == "YUCATAN-FELSZIGET")) {
+        nextLevel();
+    } else {
+        document.getElementById("level6Error").classList.remove("none");
+    }
+}
+
+function level7Click() {
+    let name = document.getElementById("level7Name").value;
+    if (name.trim().toUpperCase() == "HIALIT")  {
+        nextLevel();
+    } else {
+        document.getElementById("level7Error").classList.remove("none");
+    }
 }
 
 function nextLevel() {

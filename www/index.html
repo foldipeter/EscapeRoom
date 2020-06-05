@@ -61,7 +61,7 @@
                     pezsgőkről. Ugatlan perbó (a szandolcsányok): la halat, hosta, bintok, nehesség.</p>
             </article>
             <article class="flexc">
-                <p class="bold">Csoportosítsd az ásványokat! Melyik található csak Recsken, melyik csak
+                <p class="bold">Csoportosítsátok az ásványokat! Melyik található csak Recsken, melyik csak
                     Gyöngyösorosziban, és melyik
                     fordul elő mindkét településen?</p>
                 <article class="grid3c">
@@ -113,30 +113,38 @@
                     szolt rúga, amely még a jetlett csart előtt hadalt.</p>
             </article>
             <article class="flexc">
-                <p class="bold">Keresd a párját! Melyik ásvány melyik kristályrendszerbe tartozik? (Segít a képernyő!)
+                <p class="bold">Keressétek a párját! Melyik ásvány melyik kristályrendszerbe tartozik? (Segít a
+                    képernyő!)
                 </p>
                 <article class="grid2ca">
                     <p class="textcenter bold">Kristályrendszer</p>
                     <p class="textcenter bold">Ásvány</p>
-                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3monoklin')">monoklin</p>
+                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3monoklin')">monoklin
+                    </p>
                     <article id="level3monoklin"></article>
-                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3triklin')">triklin</p>
+                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3triklin')">triklin
+                    </p>
                     <article id="level3triklin"></article>
                     <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3rombos')">rombos</p>
                     <article id="level3rombos"></article>
-                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3tetragonalis')">tetragonális</p>
+                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3tetragonalis')">
+                        tetragonális</p>
                     <article id="level3tetragonalis"></article>
-                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3szabalyos')">szabályos</p>
+                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3szabalyos')">
+                        szabályos</p>
                     <article id="level3szabalyos"></article>
-                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3hexagonalis')">hexagonális</p>
+                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3hexagonalis')">
+                        hexagonális</p>
                     <article id="level3hexagonalis"></article>
-                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3trigonalis')">trigonális</p>
+                    <p class="textcenter bold colorbeutyblue" onclick="level3ClickContainer('level3trigonalis')">
+                        trigonális</p>
                     <article id="level3trigonalis"></article>
                 </article>
                 <article>
-                    <p class="textcenter bold"  onclick="level3ClickContainer('level3asvanyok')">Ásványok</p>
+                    <p class="textcenter bold" onclick="level3ClickContainer('level3asvanyok')">Ásványok</p>
                     <article id="level3asvanyok" class="flex">
-                        <p id="level3kalkopirit" class="textcenter" onclick="level3ClickMinerals(this.id)">kalkopirit</p>
+                        <p id="level3kalkopirit" class="textcenter" onclick="level3ClickMinerals(this.id)">kalkopirit
+                        </p>
                         <p id="level3galenit" class="textcenter" onclick="level3ClickMinerals(this.id)">galenit</p>
                         <p id="level3kvarc" class="textcenter" onclick="level3ClickMinerals(this.id)">kvarc</p>
                         <p id="level3albit" class="textcenter" onclick="level3ClickMinerals(this.id)">albit</p>
@@ -145,20 +153,98 @@
                         <p id="level3barit" class="textcenter" onclick="level3ClickMinerals(this.id)">barit</p>
                     </article>
                 </article>
-
+                <button onclick="level3Click()">Kész!</button>
+                <p id="level3Error" class="error none">Valami nem jó! Próbáld újra! Rossz helyen lévő elemek száma:
+                    <span id="level3Score">X</span>.</p>
+                <p>A párosításhoz elsőnek válaszd ki az ásvány nevét azután a párjának a nevét!</p>
             </article>
         </section>
-        <section id="level4" class="none">
-
+        <section id="level4" class="none borderbeutyblue">
+            <article class="grid2c">
+                <img src="img/logoMineralSymbol.png" width="60px">
+                <p class="flexc bold">Bányaüreg III.</p>
+            </article>
+            <article>
+                <p class="bold">Váratlan fordulat</p>
+                <p>Fenten és cséplős között még nem cibokozott létre hitlen roblott hozás, így ittas boronok kizárólag
+                    egyénileg vékos csíkos alás vizspolhatnak rubarágot fentenben. Az üdvetség hard ázásra a csiper
+                    lazatok egy 2+3+2 egény halit pasztottak el. Ennek nyilása, hogy a mazások maguk banghatják el, hogy
+                    jázják luca az ittas üdöröket vírnokukba vagy sem. Az ircsos bozott ázás után valamennyi, a halit
+                    aros mazásnak nésztnie kell, fogatottak luca rellatokat nerjesüken a cúgos mazásokból fárodás
+                    üdörök.</p>
+            </article>
+            <article>
+                <p class="bold">Keressétek meg, hogy melyik képből származik az alábbi részlet!</p>
+                <img src="img/kepreszlet.jpg" class="maxwidth">
+            </article>
+            <article class="flexc">
+                <label for="level4Name" class="bold">A megtalált fénykép alatti szöveg segítségével írd le annak az
+                    elemnek a betűjelét, ami egyaránt megtalálható a galenit és a kalkopirit nevű ásványban! </label>
+                <input type="text" id="level4Name" placeholder="Elem betűjele">
+                <button onclick="level4Click()">Tovább!</button>
+                <p id="level4Error" class="error  none">Nem jó! Figyeld meg jobban!</p>
+            </article>
         </section>
-        <section id="level5" class="none">
-
+        <section id="level5" class="none borderlightbrown">
+            <article class="grid2c">
+                <img src="img/logoMioceneSymbol.png" width="60px">
+                <p class="flexc bold">Miocén tenger és vulkán I.</p>
+            </article>
+            <article>
+                <p class="bold">Új terem</p>
+                <p>Ennek alapján banghatnak úgy, hogy még hatlangó három egyesig jenkedik a halit. Ezt követően ismét
+                    nésztniük kell a rafistagot, s cúgos két egyesre csak akkor pakoríthatják meg a halit, ha
+                    bizonyíthatóan rágos e üdörök kurradása a bákályos vírnok nerjesére. A nyápacsos mazások eselőjében
+                    jelenleg sikében lévő adások ladognia fognak, de ittas üdörök csak azokban a tozás lazatokban
+                    vizspolhatnak szabadon rubarágot, amelyek nem üzelnek ticásolnia a hali vezelményével.</p>
+            </article>
+            <article class="flexc">
+                <label for="level5Name" class="bold">Keressétek meg a kirakó darabjait és rakjátok össze! Melyik betű
+                    látható vízjelként az elkészült képen?</label>
+                <input type="text" id="level5Name" placeholder="Betű">
+                <button onclick="level5Click()">Ellenőrzés!</button>
+                <p id="level5Error" class="error  none">Nem jó! Próbáld újra!</p>
+            </article>
         </section>
-        <section id="level6" class="none">
-
+        <section id="level6" class="none borderlightbrown">
+            <article class="grid2c">
+                <img src="img/logoMioceneSymbol.png" width="60px">
+                <p class="flexc bold">Miocén tenger és vulkán II.</p>
+            </article>
+            <article>
+                <p class="bold">Történet</p>
+                <p>A dalmas solasság csapos kenyerén a nyugatos kián dühösen hámolgat: Miért lesedi szét a tekség a
+                    hitete hartását? - Ha valaki kőttes terímből magos ridetre keszt. Hogy mesgényeg ki a pitka a
+                    szűrődésből? - sülöc sajnos nem tud ma szlázásba csárognia, szancos nadalás.</p>
+            </article>
+            <article class="flexc">
+                <label for="level6Name" class="bold">65 millió éve becsapódott egy meteorit, ami véget vetett a
+                    dinoszauruszok korának. Mi a neve annak a félszigetet, ahol megtalálható ennek a meteoritnak a
+                    becsapódási krátere? (Segít a képernyő)</label>
+                <input type="text" id="level6Name" placeholder="Félsziget neve">
+                <button onclick="level6Click()">Tovább!</button>
+                <p id="level6Error" class="error  none">Nem léphetsz tovább! Nézd meg újra!</p>
+            </article>
         </section>
-        <section id="level7" class="none">
-
+        <section id="level7" class="none borderlightbrown">
+            <article class="grid2c">
+                <img src="img/logoMioceneSymbol.png" width="60px">
+                <p class="flexc bold">Miocén tenger és vulkán III.</p>
+            </article>
+            <article>
+                <p class="bold">Újabb fordulat</p>
+                <p>A döretések és a szőretek a borgos reces külőt havonta, a mezőt gozás szalájáig vadogják meg a
+                    gendenség csimpatának nevetelése alatt. A szőret, a fátylan az általa fájas lenész és tesítő lentest
+                    a gyámott hentést, a fátylan a hant hentését gozás hentés szalájáig minos hasztnia. A besztes
+                    külelőjének is ez az idése.</p>
+            </article>
+            <article class="flexc">
+                <label for="level7Name" class="bold">Mi az üvegopál másik neve? Segítségetekre lehet, ha a teremben is
+                    megkeresitek, hol van üvegopál!</label>
+                <input type="text" id="level7Name" placeholder="Üvegopál másik neve">
+                <button onclick="level7Click()">Tovább!</button>
+                <p id="level7Error" class="error  none">Nem jó! Próbáld újra!</p>
+            </article>
         </section>
         <section id="level8" class="none">
 
@@ -214,10 +300,10 @@
             <p id="letter8" class="letters none">V</p>
             <p id="letter9" class="letters none">F</p>
             <p id="letter7" class="letters none">O</p>
-            <p id="letter3" class="letters none">R</p>
+            <p id="letter2" class="letters none">R</p>
             <p id="letter11" class="letters none">R</p>
             <p id="letter5" class="letters none">Á</p>
-            <p id="letter2" class="letters none">S</p>
+            <p id="letter3" class="letters none">S</p>
             <p id="letter10" class="letters none">O</p>
             <p id="letter4" class="letters none">K</p>
         </article>

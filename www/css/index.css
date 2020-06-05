@@ -99,9 +99,19 @@ p, input, button, label {
     border-left: 33px solid var(--beutyblue);
 }
 
+.borderlightbrown {
+    border-left: 33px solid var(--lightbrown);
+}
 .maxwidth {
     max-width: 100%;
+    height: auto;
 }
+
+.maxwidth50 {
+    max-width: 50%;
+    height: auto;
+}
+
 
 .textcenter {
     text-align: center;
