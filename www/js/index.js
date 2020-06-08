@@ -265,7 +265,7 @@ function level13Click() {
     if ((name.trim().toUpperCase() == "HÉVFORRÁSOK") || (name.trim().toUpperCase() == "HEVFORRASOK")) {
         nextLevel();
         player.end = new Date();
-        let time = Math.round((player.end-player.start)/60000);
+        let time = Math.round((player.end - player.start) / 60000);
         document.getElementById("level14Time").innerHTML = time;
     } else {
         document.getElementById("level13Error").classList.remove("none");
