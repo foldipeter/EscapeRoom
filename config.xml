@@ -14,7 +14,7 @@
   <author>
       FÖldi Péter
   </author>
-
+  <icon src="icon.png" />
   <platform name="ios" />
   <platform name="android" />
   <platform name="winphone" />
