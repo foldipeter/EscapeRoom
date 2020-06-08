@@ -14,9 +14,9 @@
   <author>
       FÖldi Péter
   </author>
-  <icon src="favicon.png" />
-  <platform name="ios" />
-  <platform name="android" />
-  <platform name="winphone" />
-
+  <platform name="android">
+    <preference name="AndroidLaunchMode" value="singleTop"/>
+    <preference name="android-minSdkVersion" value="23" />
+    <icon src="icon.png" />
+  </platform>
 </widget>
