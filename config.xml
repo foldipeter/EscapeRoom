@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.mtmmm.escaperoom"
+    versionCode = "10"
+    version     = "1.0.0" >
+
+  <name>MTM MM EscapeRoom</name>
+
+  <description>
+      Escaperoom game for summer camp at Matra Muzeum.
+  </description>
+
+  <author>
+      FÖldi Péter
+  </author>
+
+  <platform name="ios" />
+  <platform name="android" />
+  <platform name="winphone" />
+
+</widget>
