@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<widget xmlns   = "http://www.w3.org/ns/widgets"
+  <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.mtmmm.escaperoom"
     versionCode = "10"
     version     = "1.0.0" >
 
-  <name>Szabadulószoba</name>
+    <name>Szabadulószoba</name>
 
-  <description>
+    <description>
       Escaperoom game for summer camp at Matra Muzeum.
-  </description>
+    </description>
 
-  <author>
-      MTMMM
-  </author>
-  <platform name="android">
-    <preference name="AndroidLaunchMode" value="singleTop"/>
-    <preference name="android-minSdkVersion" value="23" />
-    <icon src="www/img/logo.png" />
-  </platform>
-</widget>
+    <author>
+      MTM-MM
+    </author>
+
+    <platform name="android">
+      <preference name="AndroidLaunchMode" value="singleTop"/>
+      <preference name="android-minSdkVersion" value="23" />
+      <icon src="www/img/logo.png" />
+    </platform>
+    
+  </widget>
