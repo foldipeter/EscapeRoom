@@ -16,7 +16,47 @@ var level3 = {
     "selected": "none",
     "solution": { "level3kalkopirit": "level3tetragonalis", "level3galenit": "level3szabalyos", "level3kvarc": "level3trigonalis", "level3albit": "level3triklin", "level3wurtzit": "level3hexagonalis", "level3gipsz": "level3monoklin", "level3barit": "level3rombos" },
     "currentm": { "level3kalkopirit": "level3asvanyok", "level3galenit": "level3asvanyok", "level3kvarc": "level3asvanyok", "level3albit": "level3asvanyok", "level3wurtzit": "level3asvanyok", "level3gipsz": "level3asvanyok", "level3barit": "level3asvanyok" },
-    "currentc": { "level3tetragonalis": "none", "level3szabalyos": "none", "level3trigonalis": "none", "level3triklin": "none", "level3hexagonalis": "none", "level3monoklin": "none", "level3rombos": "none", "level3asvanyok": "none"}
+    "currentc": { "level3tetragonalis": "none", "level3szabalyos": "none", "level3trigonalis": "none", "level3triklin": "none", "level3hexagonalis": "none", "level3monoklin": "none", "level3rombos": "none", "level3asvanyok": "none" }
+}
+
+var level9 = {
+    "selected": ["none", "none", "none", "none", "none"],
+    "group": [["level9answer1", "level9answer2", "level9answer3"], ["level9answer4", "level9answer5", "level9answer6"], ["level9answer7", "level9answer8", "level9answer9"], ["level9answer10", "level9answer11", "level9answer12"], ["level9answer13", "level9answer14", "level9answer15"]]
+}
+
+var letter = {
+    "selected": "none",
+    "order": ["letter1", "letter2", "letter3", "letter4", "letter5", "letter6", "letter7", "letter8", "letter9", "letter10", "letter11",]
+}
+
+function letterClick(id) {
+    if (letter.selected == "none") {
+        letter.selected = id;
+        document.getElementById(id).classList.add("fontsize25");
+        return;
+    }
+    if (letter.selected == id) {
+        letter.selected = "none";
+        document.getElementById(id).classList.remove("fontsize25");
+    } else {
+        let select = 0;
+        let replace = 0;
+        for (let i = 0; i < letter.order.length; i++) {
+            if (letter.selected == letter.order[i]) {
+                select = i;
+            }
+            if (id == letter.order[i]) {
+                replace = i;
+            }
+        }
+        letter.order[select] = id;
+        letter.order[replace] = letter.selected;
+        document.getElementById(letter.selected).classList.remove("fontsize25");
+        letter.selected = "none";
+        for (let i = 0; i < letter.order.length; i++) {
+            document.getElementById("containerLetters").appendChild(document.getElementById(letter.order[i]));
+        }
+    }
 }
 
 function level1Click() {
@@ -146,10 +186,89 @@ function level6Click() {
 
 function level7Click() {
     let name = document.getElementById("level7Name").value;
-    if (name.trim().toUpperCase() == "HIALIT")  {
+    if (name.trim().toUpperCase() == "HIALIT") {
         nextLevel();
     } else {
         document.getElementById("level7Error").classList.remove("none");
+    }
+}
+
+function level8Click() {
+    let name = document.getElementById("level8Name").value;
+    if (name.trim().toUpperCase() == "V") {
+        nextLevel();
+    } else {
+        document.getElementById("level8Error").classList.remove("none");
+    }
+}
+
+function level9answerClick(id) {
+    let question = 0;
+    for (let i = 0; i < level9.group.length; i++) {
+        if (level9.group[i].includes(id)) {
+            for (let j = 0; j < level9.group[i].length; j++) {
+                document.getElementById(level9.group[i][j]).classList.remove("borderbrown");
+            }
+            question = i;
+            break;
+        }
+    }
+    level9.selected[question] = id;
+    document.getElementById(id).classList.add("borderbrown");
+}
+
+function level9Click() {
+    let score = 0;
+    if (level9.selected[0] == "level9answer1") { score++; }
+    if (level9.selected[1] == "level9answer5") { score++; }
+    if (level9.selected[2] == "level9answer9") { score++; }
+    if (level9.selected[3] == "level9answer10") { score++; }
+    if (level9.selected[4] == "level9answer13") { score++; }
+    if (score == 5) {
+        nextLevel();
+    } else {
+        score = 5 - score;
+        document.getElementById("level9Score").innerHTML = score;
+        document.getElementById("level9Error").classList.remove("none");
+    }
+}
+
+function level10Click() {
+    let name = document.getElementById("level10Name").value;
+    if ((name.trim().toUpperCase() == "ORMÁNYOSOK") || (name.trim().toUpperCase() == "ORMANYOSOK") || (name.trim().toUpperCase() == "ORMÁNYOS") || (name.trim().toUpperCase() == "ORMANYOS")) {
+        nextLevel();
+    } else {
+        document.getElementById("level10Error").classList.remove("none");
+    }
+}
+
+function level11Click() {
+    let name = document.getElementById("level11Name").value;
+    if (name.trim().toUpperCase() == "O") {
+        nextLevel();
+    } else {
+        document.getElementById("level11Error").classList.remove("none");
+    }
+}
+
+function level12Click() {
+    let name = document.getElementById("level12Name").value;
+    if ((name.trim().toUpperCase() == "MADAGASZKÁR") || (name.trim().toUpperCase() == "MADAGASZKAR") || (name.trim().toUpperCase() == "MADAGASCAR")) {
+        nextLevel();
+    } else {
+        document.getElementById("level12Error").classList.remove("none");
+    }
+}
+
+function level13Click() {
+    let name = document.getElementById("level13Name").value;
+    if ((name.trim().toUpperCase() == "HÉVFORRÁSOK") || (name.trim().toUpperCase() == "HEVFORRASOK")) {
+        nextLevel();
+        player.end = new Date();
+        let time = Math.round((player.end-player.start)/60000);
+        document.getElementById("level14Time").innerHTML = time;
+    } else {
+        document.getElementById("level13Error").classList.remove("none");
     }
 }
 

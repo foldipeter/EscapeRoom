@@ -57,6 +57,7 @@ p, input, button, label {
 .flex {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .flexc {
@@ -91,6 +92,12 @@ p, input, button, label {
     border-radius: 10px;
 }
 
+.borderbrown {
+    border: 3px solid var(--darkbrown);
+    padding: 2px;
+    border-radius: 10px;
+}
+
 .borderbluegray {
     border-left: 33px solid var(--blugray);
 }
@@ -102,6 +109,15 @@ p, input, button, label {
 .borderlightbrown {
     border-left: 33px solid var(--lightbrown);
 }
+
+.borderdarkbrown {
+    border-left: 33px solid var(--darkbrown);
+}
+
+.borderholopurple {
+    border-left: 33px solid var(--holopurple);
+}
+
 .maxwidth {
     max-width: 100%;
     height: auto;
@@ -123,4 +139,8 @@ p, input, button, label {
 
 .colorbeutyblue {
     color: var(--beutyblue);
+}
+
+.fontsize25 {
+    font-size: 25px;
 }
