@@ -69,16 +69,19 @@ p, input, button, label {
 .grid2c {
     display: grid;
     grid-template-columns: min-content auto;
+    width: 100%;
 }
 
 .grid3c {
     display: grid;
     grid-template-columns: auto auto auto;
+    width: 100%;
 }
 
 .grid2ca {
     display: grid;
     grid-template-columns: auto auto;
+    width: 100%;
 }
 
 

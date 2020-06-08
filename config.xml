@@ -12,11 +12,11 @@
   </description>
 
   <author>
-      FÖldi Péter
+      Foldi Peter
   </author>
   <platform name="android">
     <preference name="AndroidLaunchMode" value="singleTop"/>
     <preference name="android-minSdkVersion" value="23" />
-    <icon src="icon.png" />
+    <icon src="www/img/icon.png" />
   </platform>
 </widget>
