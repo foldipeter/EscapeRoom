@@ -14,9 +14,9 @@
   <author>
       Foldi Peter
   </author>
-  <icon src="www/img/logo.png" />
   <platform name="android">
     <preference name="AndroidLaunchMode" value="singleTop"/>
     <preference name="android-minSdkVersion" value="23" />
+    <icon src="www/img/logo.png" />
   </platform>
 </widget>
