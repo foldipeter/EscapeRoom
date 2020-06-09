@@ -13,7 +13,7 @@
 
 <body>
     <header class="grid2c">
-        <img src="img/logoCommon.png" width="75" onclick="nextLevel()" alt="logo">
+        <img src="img/logoCommon.png" width="75" alt="logo">
         <article class="flexc marginl10">
             <p>MTM MM Élménytér - Szabadulószoba</p>
             <p id="status">● ○○○ ○○○ ○○○ ○○○ ○</p>
@@ -26,24 +26,24 @@
                 <p class="flexc bold">Bevezetés</p>
             </article>
             <article>
-                <p class="bold">Jártatok már szabadulószobában?</p>
+                <p class="bold">Jártál már szabadulószobában?</p>
                 <p>Ha nem, akkor ez egy remek alkalom arra, hogy kipróbáld, milyen élvezetes kiszabadulni egy bezárt
                     szobából, pusztán a logikádnak köszönhetően! Fejtörők és logikai összefüggések segítenek majd, hogy
-                    egyre közelebb jussatok a kijárathoz. Nincs szükség lexikális tudásra, ellenben az együttműködés, a
+                    egyre közelebb juss a kijárathoz. Nincs szükség lexikális tudásra, ellenben az együttműködés, a
                     kreativitás mind kell a bent töltött idő alatt.</p>
-                <p>Ha viszont jártál már hasonló helyen, most részesei lehettek néhány igazán egyedi tudományos
+                <p>Ha viszont jártál már hasonló helyen, most részesei lehetsz néhány igazán egyedi tudományos
                     szabadulásnak.</p>
-                <p>A szabadulószobában 2-5 fő játszhat egyszerre egy időben, és 45-60 perc áll a rendelkezésetekre a
+                <p>A szabadulószobában 2-5 fő játszhat egyszerre egy időben, és 45-60 perc áll a rendelkezésre a
                     kiszabaduláshoz.</p>
-                <p>A játék során egy fiatal őslénykutató bőrébe bújhattok, akik rejtélyes meghívást kaptak levélben Mr.
+                <p>A játék során egy fiatal őslénykutató bőrébe bújhatsz, aki rejtélyes meghívást kapott levélben Mr.
                     X-től, a híres tudóstól. Mr. X azt állítja, hogy megfejtette a Bába-kő rejtélyét. Arra kér
-                    benneteket, hogy oldjátok meg a felfedezéshez vezető rejtvényeket. Vizsgáljátok meg a rendelkezésre
-                    álló bizonyítékokat, az eredményeket gondoljátok végig. Mr. X arra kíváncsi, hogy ugyan arra a
-                    következtetésre juttok-e, mint Ő. Ha sikerül, együtt tárhatjátok eredményeteket a világ felé.
-                    Rendkívül csábító ajánlat ez arra, hogy bekerülhessen a nevetek a Föld történetébe.</p>
+                    téged, hogy old meg a felfedezéshez vezető rejtvényeket. Vizsgáld meg a rendelkezésre
+                    álló bizonyítékokat, az eredményeket gondold végig. Mr. X arra kíváncsi, hogy ugyan arra a
+                    következtetésre jutsz-e, mint Ő. Ha sikerül, együtt tárhatjátok eredményeteket a világ felé.
+                    Rendkívül csábító ajánlat ez arra, hogy bekerülhessen a neved a Föld történetébe.</p>
             </article>
             <article class="flexc">
-                <label for="level1Name" class="bold">Találjatok ki egy csapatnevet és írjátok ide!</label>
+                <label for="level1Name" class="bold">Találj ki egy csapatnevet és írd ide!</label>
                 <input type="text" id="level1Name" placeholder="Csapatnév">
                 <button onclick="level1Click()">Induljun a kaland!</button>
                 <p id="level1Error" class="error  none">Valami gond van a névvel! Próbáld újra!</p>
@@ -61,13 +61,16 @@
                     tovább léphetsz a következő szintre!</p>
             </article>
             <article class="flexc">
-                <p class="bold">Csoportosítsátok az ásványokat! Melyik található csak Recsken, melyik csak
+                <p class="bold">Csoportosítsd az ásványokat! Melyik található csak Recsken, melyik csak
                     Gyöngyösorosziban, és melyik
                     fordul elő mindkét településen?</p>
                 <article class="grid3c">
-                    <p class="textcenter bold colorbeutyblue borderbottom" onclick="level2ClickContainer('level2R')">Recsk</p>
-                    <p class="textcenter bold colorbeutyblue borderbottom" onclick="level2ClickContainer('level2M')">Mindkettő</p>
-                    <p class="textcenter bold colorbeutyblue borderbottom" onclick="level2ClickContainer('level2Gy')">Gyöngyösoroszi
+                    <p class="textcenter bold colorbeutyblue borderbottom" onclick="level2ClickContainer('level2R')">
+                        Recsk</p>
+                    <p class="textcenter bold colorbeutyblue borderbottom" onclick="level2ClickContainer('level2M')">
+                        Mindkettő</p>
+                    <p class="textcenter bold colorbeutyblue borderbottom" onclick="level2ClickContainer('level2Gy')">
+                        Gyöngyösoroszi
                     </p>
                     <article id="level2R" class="borderright">
                     </article>
@@ -76,7 +79,8 @@
                     <article id="level2Gy" class="borderleft">
                     </article>
                 </article>
-                <p class="textcenter bold colorbeutyblue borderbottom" onclick="level2ClickContainer('level2A')">Ásványok</p>
+                <p class="textcenter bold colorbeutyblue borderbottom" onclick="level2ClickContainer('level2A')">
+                    Ásványok</p>
                 <article class="flex" id="level2A">
                     <p id="level2pirit" onclick="level2ClickMinerals(this.id)" class="textcenter">pirit</p>
                     <p id="level2kalkopirit" onclick="level2ClickMinerals(this.id)" class="textcenter">kalkopirit</p>
@@ -112,7 +116,7 @@
                     kristályrendszert. Jutalmad egy újabb betű a megfejtésből.</p>
             </article>
             <article class="flexc">
-                <p class="bold">Keressétek a párját! Melyik ásvány melyik kristályrendszerbe tartozik? (Segít a
+                <p class="bold">Keresd a párját! Melyik ásvány melyik kristályrendszerbe tartozik? (Segít a
                     képernyő!)
                 </p>
                 <article class="grid2ca">
@@ -140,7 +144,8 @@
                     <article id="level3trigonalis"></article>
                 </article>
                 <article>
-                    <p class="textcenter bold borderbottom" onclick="level3ClickContainer('level3asvanyok')">Ásványok</p>
+                    <p class="textcenter bold borderbottom" onclick="level3ClickContainer('level3asvanyok')">Ásványok
+                    </p>
                     <article id="level3asvanyok" class="flex">
                         <p id="level3kalkopirit" class="textcenter" onclick="level3ClickMinerals(this.id)">kalkopirit
                         </p>
@@ -249,7 +254,7 @@
                 <p class="bold">Jégkorszak</p>
                 <p>Mr. X hirtelen a pleisztocén jégkorszak kellős közepén találta magát. 2,588 – 0,0117 millió évvel
                     ezelőtt járunk a Föld életében. Gyapjas mamutokkal, gyapjas orrszarvúval találkozott és
-                    megcsodálhatta a jégkorszak élővilágát. Találkozott őseinkkel is a homo sapiensekkel. Újabb három
+                    megcsodálhatta a jégkorszak élővilágát. Találkozott őseinkkel is a Homo sapiensekkel. Újabb három
                     betűt talált a furfangos feladványok megfejtése közepette, ami közelebb vitte Őt a végső
                     megoldáshoz.</p>
             </article>
@@ -272,7 +277,7 @@
                 <p class="bold">Rejtélyes barlang</p>
                 <p> Mr. X egy barlangban ébredt fel, és amikor kinyitotta a szemét érdekes rajzokra lett figyelmes a
                     barlang falán. A rajzok tanulmányozása során rájött néhány fontos dologra a jégkorszaki életről.
-                    Készített számodra egy kvíz kérdés sort, aminek a megfejtésével újabb betűt kapsz a szabadulásod
+                    Készített számodra egy kvízt, aminek a megfejtésével újabb betűt kapsz a szabadulásod
                     kulcsához.
                 </p>
             </article>
@@ -305,7 +310,7 @@
                 </article>
                 <p class="bold">5. Élt-e ember a legutóbbi eljegesedés idején Európában?</p>
                 <article class="flex marginl10">
-                    <p id="level9answer13" onclick="level9answerClick(this.id)">s, Igen, a neandervölgyi és a homo
+                    <p id="level9answer13" onclick="level9answerClick(this.id)">s, Igen, a neandervölgyi és a Homo
                         sapiens ember is élt már</p>
                     <p id="level9answer14" onclick="level9answerClick(this.id)">j, Igen, egy nagyon kezdetleges
                         embertípus</p>
@@ -396,13 +401,13 @@
             <article>
                 <p class="bold">Megoldás</p>
                 <p>Mr. X útja ezzel véget ért. Megtalálta az összes betűt a Bába-kő titkának megfejtéséhez. Arra kér,
-                    hogy légy részese a titoknak! Szeretne bebizonyosodni arról, hogy Te is ugyan arra a rejtélyre
+                    hogy légy részese a titoknak! Szeretne megbizonyosodni arról, hogy Te is ugyan arra a rejtélyre
                     bukkantál, mint Ő.</p>
             </article>
             <article class="flexc">
                 <label for="level13Name">Összegyűjtötted a 11 betűt, amiket alul láthatsz! Alkoss meg belőlük egy
                     értelmes összetett szót
-                    és írdle!</label>
+                    és írd le!</label>
                 <input type="text" id="level13Name" placeholder="Rejtély megoldása">
                 <button onclick="level13Click()">Tovább!</button>
                 <p id="level13Error" class="error  none">Valami nem jó! Pórbáld újra!</p>
@@ -433,7 +438,7 @@
                     működtek. A gejzírek kovasavtartalmú meleg vize néhol átalakította a hegy kőzeteit, s egészen új
                     kőzetfajta, a gejzirit keletkezett. Egyik babonás néphit szerint a nevét onnan kapta, hogy hajdanán
                     itt égették el a boszorkányokat. Másik hiedelem szerint az öreg Mátra szelleme kergette a vasorrú
-                    bábát, akit nem tudott utolérni, így mérgében utána dobta ezt a nagy követ. Ezért hívják Bábakőnek.
+                    bábát, akit nem tudott utolérni, így mérgében utána dobta ezt a nagy követ. Ezért hívják Bába-kőnek.
                 </p>
                 <img src="img/babako.jpg" class="maxwidth" alt="babako">
             </article>
