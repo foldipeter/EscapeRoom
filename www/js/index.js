@@ -26,10 +26,13 @@ var level9 = {
 
 var letter = {
     "selected": "none",
-    "order": ["letter1", "letter2", "letter3", "letter4", "letter5", "letter6", "letter7", "letter8", "letter9", "letter10", "letter11",]
+    "order": ["letter1", "letter2", "letter3", "letter4", "letter5", "letter6", "letter7", "letter8", "letter9", "letter10", "letter11",],
+    "solution": ["letter6", "letter1", "letter7", "letter8", "letter9", "letter2", "letter11", "letter5", "letter3", "letter10", "letter4"],
+    "dict": { "letter9": "letter10", "letter10": "letter9", "letter11": "letter2", "letter2": "letter11" }
 }
 
 function letterClick(id) {
+    if (player.level == 14) { return; }
     if (letter.selected == "none") {
         letter.selected = id;
         document.getElementById(id).classList.add("fontsize25");
@@ -55,6 +58,26 @@ function letterClick(id) {
         letter.selected = "none";
         for (let i = 0; i < letter.order.length; i++) {
             document.getElementById("containerLetters").appendChild(document.getElementById(letter.order[i]));
+        }
+    }
+    if (player.level == 13) {
+        let score = 0;
+        for (let i = 0; i < letter.order.length; i++) {
+            if (letter.order[i] == letter.solution[i]) {
+                score++;
+            } else {
+                if (letter.order[i] in letter.dict) {
+                    if (letter.dict[letter.order[i]] == letter.solution[i]) {
+                        score++;
+                    }
+                }
+            }
+        }
+        if (score == 11) {
+            player.end = new Date();
+            let time = Math.round((player.end - player.start) / 60000);
+            document.getElementById("level14Time").innerHTML = time;
+            nextLevel();
         }
     }
 }
@@ -262,7 +285,7 @@ function level12Click() {
 
 function level13Click() {
     let name = document.getElementById("level13Name").value;
-    if ((name.trim().toUpperCase() == "HÉVFORRÁSOK") || (name.trim().toUpperCase() == "HEVFORRASOK")) {
+    if ((name.trim().toUpperCase() == "HÉVFORRÁSOK") || (name.trim().toUpperCase() == "HEVFORRASOK") || (name.trim().toUpperCase() == "HÉVFORRASOK") || (name.trim().toUpperCase() == "HEVFORRÁSOK")) {
         nextLevel();
         player.end = new Date();
         let time = Math.round((player.end - player.start) / 60000);
@@ -294,6 +317,12 @@ function nextLevel() {
         document.getElementById("status").innerHTML = status;
         if ((player.level > 2) && (player.level < 14)) {
             addLetter("letter" + (player.level - 2));
+        }
+    }
+    if (player.level == 14) {
+        for (let i = 0; i < letter.solution.length; i++) {
+            document.getElementById("containerLetters").appendChild(document.getElementById(letter.solution[i]));
+            document.getElementById(letter.solution[i]).classList.remove("fontsize25");
         }
     }
 }

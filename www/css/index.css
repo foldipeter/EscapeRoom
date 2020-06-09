@@ -69,19 +69,16 @@ p, input, button, label {
 .grid2c {
     display: grid;
     grid-template-columns: min-content auto;
-    width: 100%;
 }
 
 .grid3c {
     display: grid;
     grid-template-columns: auto auto auto;
-    width: 100%;
 }
 
 .grid2ca {
     display: grid;
     grid-template-columns: auto auto;
-    width: 100%;
 }
 
 
@@ -119,6 +116,18 @@ p, input, button, label {
 
 .borderholopurple {
     border-left: 33px solid var(--holopurple);
+}
+
+.borderbottom {
+    border-bottom: 1px solid #000000;
+}
+
+.borderleft {
+    border-left: 1px solid #000000;
+}
+
+.borderright {
+    border-right: 1px solid #000000;
 }
 
 .maxwidth {
