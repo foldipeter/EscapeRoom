@@ -7,8 +7,8 @@ var player = {
 
 var level2 = {
     "selected": "none",
-    "solutionR": ["level2kalkopirit", "level2fluorit", "level2aragonit", "level2anhidrit", "level2pirrhotin"],
-    "solutionM": ["level2pirit", "level2kvarc", "level2kalcit", "level2szfalerit", "level2galenit"],
+    "solutionR": ["level2fluorit", "level2aragonit", "level2anhidrit", "level2pirrhotin"],
+    "solutionM": ["level2kalkopirit", "level2pirit", "level2kvarc", "level2kalcit", "level2szfalerit", "level2galenit"],
     "solutionGy": ["level2wurtzit", "level2barit", "level2antimonit", "level2dolomit", "level2markazit"]
 }
 
